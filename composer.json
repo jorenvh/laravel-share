@@ -1,0 +1,42 @@
+{
+    "name": "jorenvh/laravel-share",
+    "description": "Optional package for Laravel to generate social share links.",
+    "keywords": [
+        "laravel",
+        "share",
+        "social links",
+        "social share links"
+    ],
+    "homepage": "https://github.com/jorenvh/laravel-share",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joren Van Hocht",
+            "email": "jorenvh@gmail.com",
+            "homepage": "http://jorenvanhocht.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "^5.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jorenvh\\Share\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jorenvh\\Share\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests"
+    },
+    "config": {
+        "sort-packages": true
+  }
+}
