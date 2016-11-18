@@ -4,6 +4,7 @@ namespace Jorenvh\Share\Providers;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
+use Jorenvh\Share\Share;
 
 class ShareServiceProvider extends ServiceProvider
 {
@@ -19,7 +20,7 @@ class ShareServiceProvider extends ServiceProvider
     /**
      * @var \Illuminate\Contracts\Foundation\Application
      */
-    private $app;
+    protected $app;
 
     /**
      * @param \Illuminate\Contracts\Foundation\Application $app
@@ -37,8 +38,14 @@ class ShareServiceProvider extends ServiceProvider
     public function boot()
     {
        $this->publishes([
-           __DIR__.'/../config/mbr.php' => config_path('mbr.php'),
+           __DIR__.'/../../config/laravel-share.php' => config_path('laravel-share.php'),
        ], 'config');
+
+       $this->publishes([
+            __DIR__.'/../../public/js/share.js' => public_path('js/share.js')
+       ], 'assets');
+
+        $this->loadTranslationsFrom(__DIR__.'/../../resources/lang/', 'laravel-share');
      }
 
     /**
@@ -46,11 +53,12 @@ class ShareServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/mbr.php', 'mbr');
+        $this->app->bind('share', function()
+        {
+            return new Share();
+        });
 
-        if(config('mbr.enabled')) {
-            $this->registerProviders();
-        }
+        $this->mergeConfigFrom(__DIR__.'/../../config/laravel-share.php', 'laravel-share');
     }
 
     /**

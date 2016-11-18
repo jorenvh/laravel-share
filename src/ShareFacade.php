@@ -4,7 +4,7 @@ namespace Jorenvh\Share;
 
 use Illuminate\Support\Facades\Facade;
 
-class SkeletonFacade extends Facade
+class ShareFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +13,6 @@ class SkeletonFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'skeleton';
+        return 'share';
     }
 }
