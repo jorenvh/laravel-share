@@ -2,7 +2,6 @@
 
 namespace Jorenvh\Share\Providers;
 
-use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use Jorenvh\Share\Share;
 
