@@ -31,7 +31,7 @@ class Share
      *
      * @var string
      */
-    protected $prefix = '<div id="social-links"></ul>';
+    protected $prefix = '<div id="social-links"><ul>';
 
     /**
      * Html to append after the share links
