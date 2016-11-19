@@ -6,27 +6,138 @@
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/dde6008b-ccc6-4a3f-8a98-37d76532f956.svg?style=flat-square)](https://insight.sensiolabs.com/projects/dde6008b-ccc6-4a3f-8a98-37d76532f956)
 [![Total Downloads](https://img.shields.io/packagist/dt/jorenvh/laravel-share.svg?style=flat-square)](https://packagist.org/packages/jorenvh/laravel-share)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Share links exist on almost every page in every project, creating the code for these share links over and over again can be a pain in the ass.
+With Laravel Share you can generate these links in just seconds in a way tailored for Laravel.
+
+### Available services
+
+* Facebook
+* Twitter
+* Google Plus
+* Linkedin
 
 ## Installation
 
 You can install the package via composer:
 
 ``` bash
-composer require jorenvh/laravel-share
+composer require jorenvanhocht/laravel-share
 ```
 
-Load the javascript file in your template view.
 
-``` php
+This service provider must be installed.
+
+```php
+// config/app.php
+'providers' => [
+    ...
+    Jorenvh\Share\Providers\ShareServiceProvider::class,
+];
+```
+
+For easy use in views I recommend registering the Facade as well
+
+```php
+// config/app.php
+'aliases' => [
+    ...
+    'Share' => Jorenvh\Share\ShareFacade::class,
+];
+```
+
+Publish the package config & resource files.
+
+```bash
+php artisan vendor:publish --provider="Jorenvh\Share\Providers\ShareServiceProvider"
+```
+
+This will publish the ```laravel-share.php``` config file to your config folder, ```share.js``` in ```public/js/``` and ```laravel-share.php``` in your ```resources/lang/en/``` folder.
+
+### Fontawesome
+
+Since this package relies on Fontawesome, you will have to require it's css, js & fonts in your app.
+You can do that by requesting a embed code [via their website](http://fontawesome.io/get-started/) or by installing it locally in your project.
+
+### Javascript
+
+Load jquery.min.js & share.js by adding the following lines to your template files.
+
+```html
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="{{ asset('js/share.js') }}"></script>
 ```
 
 ## Usage
 
+### Creating one share link
+
+#### Facebook
+
 ``` php
-$skeleton = new Jorenvh\Share\Skeleton();
-echo $skeleton->echoPhrase('Hello, These Days!');
+Share::page('http://jorenvanhocht.be')->facebook();
+```
+
+#### Twitter
+
+``` php
+Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->twitter();
+```
+
+#### Google Plus
+
+``` php
+Share::page('http://jorenvanhocht.be')->googlePlus();
+```
+
+#### Linkedin
+
+``` php
+Share::page('http://jorenvanhocht.be', 'Share title')->linkedin('Extra linkedin summary can be passed here')
+```
+
+### Creating multiple share Links
+
+If want multiple share links for (multiple) providers you can just chain the methods like this.
+
+```php
+Share::page('http://jorenvanhocht.be', 'Share title')
+	->facebook()
+	->twitter()
+	->googlePlus()
+	->linkedin('Extra linkedin summary can be passed here');
+```
+
+This will generate the following html
+
+```html
+<div id="social-links">
+	<ul>
+		<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
+		<li><a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
+		<li><a href="https://plus.google.com/share?url=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-google-plus"></span></a></li>
+		<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://jorenvanhocht.be&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
+	</ul>
+</div>
+```
+### Optional parameters
+
+#### Add extra classes and id's to the social buttons
+
+You can simply add extra class(es) or id('s) by passing an array as the third parameter on the page method.
+
+```php
+Share::page('http://jorenvanhocht.be', null, ['class' => 'my-class', 'id' => 'my-id'])
+    ->facebook();
+```
+
+Which will result in the following html
+
+```html
+<div id="social-links">
+	<ul>
+		<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button my-class" id="my-id"><span class="fa fa-facebook-official"></span></a></li>
+	</ul>
+</div>
 ```
 
 ## Changelog
