@@ -13,27 +13,26 @@ class ShareServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-       $this->publishes([
-           __DIR__.'/../../config/laravel-share.php' => config_path('laravel-share.php'),
-       ], 'config');
+        $this->publishes([
+            __DIR__ . '/../../config/laravel-share.php' => config_path('laravel-share.php'),
+        ], 'config');
 
-       $this->publishes([
-            __DIR__.'/../../public/js/share.js' => public_path('js/share.js')
-       ], 'assets');
+        $this->publishes([
+            __DIR__ . '/../../public/js/share.js' => public_path('js/share.js')
+        ], 'assets');
 
-        $this->loadTranslationsFrom(__DIR__.'/../../resources/lang/', 'laravel-share');
-     }
+        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang/', 'laravel-share');
+    }
 
     /**
      * Register the application services.
      */
     public function register()
     {
-        $this->app->bind('share', function()
-        {
+        $this->app->bind('share', function () {
             return new Share();
         });
 
-        $this->mergeConfigFrom(__DIR__.'/../../config/laravel-share.php', 'laravel-share');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/laravel-share.php', 'laravel-share');
     }
 }
