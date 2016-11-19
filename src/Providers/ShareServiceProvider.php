@@ -9,30 +9,6 @@ use Jorenvh\Share\Share;
 class ShareServiceProvider extends ServiceProvider
 {
     /**
-     * Service providers to register
-     *
-     * @var array
-     */
-    protected $providers = [
-        // service providers to register
-    ];
-
-    /**
-     * @var \Illuminate\Contracts\Foundation\Application
-     */
-    protected $app;
-
-    /**
-     * @param \Illuminate\Contracts\Foundation\Application $app
-     */
-    public function __construct(Application $app)
-    {
-        $this->app = $app;
-
-        $this->providers = collect($this->providers);
-    }
-
-    /**
      * Bootstrap the application services.
      */
     public function boot()
@@ -59,15 +35,5 @@ class ShareServiceProvider extends ServiceProvider
         });
 
         $this->mergeConfigFrom(__DIR__.'/../../config/laravel-share.php', 'laravel-share');
-    }
-
-    /**
-     * Register dependency provider
-     */
-    private function registerProviders()
-    {
-        $this->providers->each(function($provider) {
-            $this->app->register($provider);
-        });
     }
 }
