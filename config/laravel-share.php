@@ -16,8 +16,5 @@ return [
             'uri' => 'http://www.linkedin.com/shareArticle',
             'extra' => ['mini' => 'true']
         ],
-        'email' => [
-            'view' => 'social-share::email'
-        ],
     ],
 ];
