@@ -140,6 +140,33 @@ Which will result in the following html
 </div>
 ```
 
+#### Custom wrapping
+
+By default social links will be wrapped in the following html
+
+```html
+<div id="social-links">
+	<ul>
+		<!-- social links will be added here -->
+	</ul>
+</div>
+```
+
+This can be customised by passing the prefix & suffix as a parameter.
+
+```php
+Share::page('http://jorenvanhocht.be', null, [], '<ul>', '</ul>')
+            ->facebook();
+```
+
+This will output the following html.
+
+```html
+<ul>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
+</ul>
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
