@@ -95,6 +95,14 @@ Share::page('http://jorenvanhocht.be')->googlePlus();
 Share::page('http://jorenvanhocht.be', 'Share title')->linkedin('Extra linkedin summary can be passed here')
 ```
 
+### Sharing the current url
+
+Instead of manually passing an url, you can opt to use the `currentPage` function.
+
+```php
+Share::currentPage()->facebook();
+```
+
 ### Creating multiple share Links
 
 If want multiple share links for (multiple) providers you can just chain the methods like this.

@@ -81,6 +81,20 @@ class Share
     }
 
     /**
+     * @param null $title
+     * @param array $options
+     * @param null $prefix
+     * @param null $suffix
+     * @return $this
+     */
+    public function currentPage($title = null, $options = [], $prefix = null, $suffix = null)
+    {
+        $url = request()->getUri();
+
+        return $this->page($url, $title, $options, $prefix, $suffix);
+    }
+
+    /**
      * Facebook share link
      *
      * @return $this
