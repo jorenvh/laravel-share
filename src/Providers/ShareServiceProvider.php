@@ -12,6 +12,8 @@ class ShareServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang/', 'laravel-share');
+
         $this->publishes([
             __DIR__ . '/../../config/laravel-share.php' => config_path('laravel-share.php'),
         ], 'config');
@@ -21,10 +23,9 @@ class ShareServiceProvider extends ServiceProvider
         ], 'assets');
 
         $this->publishes([
-            __DIR__ . '/../../resources/lang/' => resource_path('lang')
+            __DIR__ . '/../../resources/lang/' => resource_path('lang/vendor/laravel-share')
         ], 'translations');
 
-        $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang/', 'laravel-share');
     }
 
     /**
