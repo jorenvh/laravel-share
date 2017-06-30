@@ -51,7 +51,7 @@ Publish the package config & resource files.
 php artisan vendor:publish --provider="Jorenvh\Share\Providers\ShareServiceProvider"
 ```
 
-This will publish the ```laravel-share.php``` config file to your config folder, ```share.js``` in ```public/js/``` and ```laravel-share.php``` in your ```resources/lang/en/``` folder.
+This will publish the ```laravel-share.php``` config file to your config folder, ```share.js``` in ```public/js/``` and ```laravel-share.php``` in your ```resources/lang/vendor/en/``` folder.
 
 ### Fontawesome
 
