@@ -23,27 +23,7 @@ You can install the package via composer:
 ``` bash
 composer require jorenvanhocht/laravel-share
 ```
-
-
-This service provider must be installed.
-
-```php
-// config/app.php
-'providers' => [
-    ...
-    Jorenvh\Share\Providers\ShareServiceProvider::class,
-];
-```
-
-For easy use in views I recommend registering the Facade as well
-
-```php
-// config/app.php
-'aliases' => [
-    ...
-    'Share' => Jorenvh\Share\ShareFacade::class,
-];
-```
+> Laravel auto discovery registers the service provider & facade automatically.
 
 Publish the package config & resource files.
 

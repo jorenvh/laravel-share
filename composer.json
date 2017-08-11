@@ -12,8 +12,8 @@
     "authors": [
         {
             "name": "Joren Van Hocht",
-            "email": "jorenvh@gmail.com",
-            "homepage": "http://jorenvanhocht.be",
+            "email": "joren@codeswitch.be",
+            "homepage": "https:://codeswitch.be",
             "role": "Developer"
         }
     ],
@@ -39,5 +39,15 @@
     },
     "config": {
         "sort-packages": true
-  }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jorenvh\\Share\\ShareServiceProvider"
+            ],
+            "aliases": {
+                "Share": "Jorenvh\\Share\\ShareFacade"
+            }
+        }
+    }
 }
