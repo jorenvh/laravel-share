@@ -25,7 +25,7 @@ composer require jorenvanhocht/laravel-share
 ```
 
 
-This service provider must be installed.
+If you don't use auto-discovery, add the ServiceProvider to the providers array in config/app.php
 
 ```php
 // config/app.php
@@ -35,7 +35,7 @@ This service provider must be installed.
 ];
 ```
 
-For easy use in views I recommend registering the Facade as well
+And optionally add the facade in config/app.php
 
 ```php
 // config/app.php
