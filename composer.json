@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jorenvh\\Share\\ShareServiceProvider"
+                "Jorenvh\\Share\\Providers\\ShareServiceProvider"
             ],
             "aliases": {
                 "Share": "Jorenvh\\Share\\ShareFacade"
