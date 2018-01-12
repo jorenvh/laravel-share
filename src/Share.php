@@ -166,11 +166,23 @@ class Share
      */
     protected function buildLink($provider, $url)
     {
-        $this->html .= trans("laravel-share::laravel-share3.$provider", [
-            'url' => $url,
-            'class' => key_exists('class', $this->options) ? $this->options['class'] : '',
-            'id' => key_exists('id', $this->options) ? $this->options['id'] : '',
-        ]);
+        if(config('laravel-share.fontAwesomeVersion') == 4)
+        {
+            $this->html .= trans("laravel-share::laravel-share-fa4.$provider", [
+                'url' => $url,
+                'class' => key_exists('class', $this->options) ? $this->options['class'] : '',
+                'id' => key_exists('id', $this->options) ? $this->options['id'] : '',
+            ]);
+        }
+        else
+        {
+            $this->html .= trans("laravel-share::laravel-share-fa3.$provider", [
+                'url' => $url,
+                'class' => key_exists('class', $this->options) ? $this->options['class'] : '',
+                'id' => key_exists('id', $this->options) ? $this->options['id'] : '',
+            ]);    
+        }
+        
     }
 
     /**
