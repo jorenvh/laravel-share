@@ -17,4 +17,6 @@ return [
             'extra' => ['mini' => 'true']
         ],
     ],
+
+    'fontAwesomeVersion' => 4,
 ];
