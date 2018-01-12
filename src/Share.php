@@ -166,7 +166,7 @@ class Share
      */
     protected function buildLink($provider, $url)
     {
-        if(config('laravel-share.fontAwesomeVersion') == 4)
+        if(config('laravel-share.fontAwesomeVersion') == 5)
         {
             $this->html .= trans("laravel-share::laravel-share-fa4.$provider", [
                 'url' => $url,
