@@ -166,7 +166,7 @@ class Share
      */
     protected function buildLink($provider, $url)
     {
-        $this->html .= trans("laravel-share::laravel-share.$provider", [
+        $this->html .= trans("laravel-share::laravel-share3.$provider", [
             'url' => $url,
             'class' => key_exists('class', $this->options) ? $this->options['class'] : '',
             'id' => key_exists('id', $this->options) ? $this->options['id'] : '',
