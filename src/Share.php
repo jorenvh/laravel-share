@@ -168,7 +168,7 @@ class Share
     {
         if(config('laravel-share.fontAwesomeVersion') == 5)
         {
-            $this->html .= trans("laravel-share::laravel-share-fa4.$provider", [
+            $this->html .= trans("laravel-share::laravel-share-fa5.$provider", [
                 'url' => $url,
                 'class' => key_exists('class', $this->options) ? $this->options['class'] : '',
                 'id' => key_exists('id', $this->options) ? $this->options['id'] : '',
@@ -176,7 +176,7 @@ class Share
         }
         else
         {
-            $this->html .= trans("laravel-share::laravel-share-fa3.$provider", [
+            $this->html .= trans("laravel-share::laravel-share-fa.$provider", [
                 'url' => $url,
                 'class' => key_exists('class', $this->options) ? $this->options['class'] : '',
                 'id' => key_exists('id', $this->options) ? $this->options['id'] : '',
