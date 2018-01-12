@@ -18,5 +18,5 @@ return [
         ],
     ],
 
-    'fontAwesomeVersion' => 5,
+    'fontAwesomeVersion' => 4,
 ];

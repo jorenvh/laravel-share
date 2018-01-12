@@ -58,7 +58,7 @@ This will publish the ```laravel-share.php``` config file to your config folder,
 Since this package relies on Fontawesome, you will have to require it's css, js & fonts in your app.
 You can do that by requesting a embed code [via their website](http://fontawesome.io/get-started/) or by installing it locally in your project.
 
-You need to alter the config file if you are using Fontawesome version 4 - the default is version 5.
+You need to alter the config file if you are using Fontawesome version 5 - the default is version 4.
 
 ### Javascript
 
