@@ -58,6 +58,8 @@ This will publish the ```laravel-share.php``` config file to your config folder,
 Since this package relies on Fontawesome, you will have to require it's css, js & fonts in your app.
 You can do that by requesting a embed code [via their website](http://fontawesome.io/get-started/) or by installing it locally in your project.
 
+Laravel share supports Font Awesome v4 and v5, by default v4 is used. You can specify the version you want to use in ```config/laravel-share.php```
+
 ### Javascript
 
 Load jquery.min.js & share.js by adding the following lines to your template files.

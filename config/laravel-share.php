@@ -1,6 +1,18 @@
 <?php
 
 return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Services
+    |--------------------------------------------------------------------------
+    |
+    | Specify the base uri for each service.
+    |
+    |
+    |
+    */
+
     'services' => [
         'facebook' => [
             'uri' => 'https://www.facebook.com/sharer/sharer.php?u=',
@@ -17,6 +29,17 @@ return [
             'extra' => ['mini' => 'true']
         ],
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Font Awesome
+    |--------------------------------------------------------------------------
+    |
+    | Specify the version of Font Awesome that you want to use.
+    | We support version 4 and 5.
+    |
+    |
+    */
 
     'fontAwesomeVersion' => 4,
 ];

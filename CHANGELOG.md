@@ -19,3 +19,6 @@ All Notable changes to `laravel-share` will be documented in this file
 
 ## 1.0.4 - 2017-09-28
 - Bug fix for Laravel 5.5 Package Auto-Discovery, this fixes issue #9
+
+## 2.0 - 2018-01-20
+- Add support for Font Awesome 5, next to Font Awesome 4. PR #16
