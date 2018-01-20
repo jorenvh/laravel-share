@@ -166,11 +166,14 @@ class Share
      */
     protected function buildLink($provider, $url)
     {
-        $this->html .= trans("laravel-share::laravel-share.$provider", [
+        $fontAwesomeVersion = config('laravel-share.fontAwesomeVersion', 4);
+
+        $this->html .= trans("laravel-share::laravel-share-fa$fontAwesomeVersion.$provider", [
             'url' => $url,
             'class' => key_exists('class', $this->options) ? $this->options['class'] : '',
             'id' => key_exists('id', $this->options) ? $this->options['id'] : '',
         ]);
+
     }
 
     /**
