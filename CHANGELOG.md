@@ -22,3 +22,6 @@ All Notable changes to `laravel-share` will be documented in this file
 
 ## 2.0 - 2018-01-20
 - Add support for Font Awesome 5, next to Font Awesome 4. PR #16
+
+## 2.0.1 - 2018-05-18
+- Urlencode optional title & message parameters (Fixes issue #23)
