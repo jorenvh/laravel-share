@@ -12,8 +12,8 @@ class Share
     protected $url;
 
     /**
-     * Optional text for twitter
-     * and title for Linkedin
+     * Optional text for Twitter
+     * and Linkedin title
      *
      * @var string
      */
