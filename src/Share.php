@@ -120,7 +120,7 @@ class Share
         }
 
         $base = config('laravel-share.services.twitter.uri');
-        $url = $base . '?text=' . $this->title . '&url=' . $this->url;
+        $url = $base . '?text=' . urlencode($this->title) . '&url=' . $this->url;
 
         $this->buildLink('twitter', $url);
 
@@ -151,7 +151,7 @@ class Share
     {
         $base = config('laravel-share.services.linkedin.uri');
         $mini = config('laravel-share.services.linkedin.extra.mini');
-        $url = $base . '?mini=' . $mini . '&url=' . $this->url . '&title=' . $this->title . '&summary=' . $summary;
+        $url = $base . '?mini=' . $mini . '&url=' . $this->url . '&title=' . urlencode($this->title) . '&summary=' . urlencode($summary);
 
         $this->buildLink('linkedin', $url);
 
