@@ -6,7 +6,7 @@
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/dde6008b-ccc6-4a3f-8a98-37d76532f956.svg?style=flat-square)](https://insight.sensiolabs.com/projects/dde6008b-ccc6-4a3f-8a98-37d76532f956)
 [![Total Downloads](https://img.shields.io/packagist/dt/jorenvanhocht/laravel-share.svg?style=flat-square)](https://packagist.org/packages/jorenvanhocht/laravel-share)
 
-Share links exist on almost every page in every project, creating the code for these share links over and over again can be a pain in the ass.
+Share links exist on almost every page in every project. Creating the code for these share links over and over again can be a pain.
 With Laravel Share you can generate these links in just seconds in a way tailored for Laravel.
 
 ### Available services
@@ -52,14 +52,14 @@ Publish the package config & resource files.
 php artisan vendor:publish --provider="Jorenvh\Share\Providers\ShareServiceProvider"
 ```
 
-This will publish the ```laravel-share.php``` config file to your config folder, ```share.js``` in ```public/js/``` and ```laravel-share.php``` in your ```resources/lang/vendor/en/``` folder.
+This will publish the ```laravel-share.php``` config file in to your config folder, ```share.js``` in ```public/js/``` and ```laravel-share.php``` in your ```resources/lang/vendor/en/``` folder.
 
 ### Fontawesome
 
 Since this package relies on Fontawesome, you will have to require it's css, js & fonts in your app.
 You can do that by requesting a embed code [via their website](http://fontawesome.io/get-started/) or by installing it locally in your project.
 
-Laravel share supports Font Awesome v4 and v5, by default v4 is used. You can specify the version you want to use in ```config/laravel-share.php```
+Laravel share supports Font Awesome v4 and v5, by default v5 is used. You can specify the version you want to use in ```config/laravel-share.php```
 
 ### Javascript
 
@@ -106,7 +106,7 @@ Share::page('http://jorenvanhocht.be')->pinterest('pass the media image here', '
 
 ### Sharing the current url
 
-Instead of manually passing an url, you can opt to use the `currentPage` function.
+Instead of manually passing a url, you can opt to use the `currentPage` function.
 
 ```php
 Share::currentPage()->facebook();
@@ -114,7 +114,7 @@ Share::currentPage()->facebook();
 
 ### Creating multiple share Links
 
-If want multiple share links for (multiple) providers you can just chain the methods like this.
+If want multiple share links for (multiple) providers you can just chain the methods like so.
 
 ```php
 Share::page('http://jorenvanhocht.be', 'Share title')
@@ -142,7 +142,7 @@ This will generate the following html
 
 #### Add extra classes and id's to the social buttons
 
-You can simply add extra class(es) or id('s) by passing an array as the third parameter on the page method.
+You can simply add extra class(es) or id(s) by passing an array as the third parameter on the page method.
 
 ```php
 Share::page('http://jorenvanhocht.be', null, ['class' => 'my-class', 'id' => 'my-id'])
