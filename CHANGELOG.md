@@ -28,3 +28,7 @@ All Notable changes to `laravel-share` will be documented in this file
 
 ## 2.0.2 - 2018-05-18
 - Adapt tests to changed responses with urlencoded title & message parameters
+
+## 2.0.3 - 2018-08-08
+- Added Pinterest share button ~ More on it's way
+- Changed the default Fontawesome version to v5
