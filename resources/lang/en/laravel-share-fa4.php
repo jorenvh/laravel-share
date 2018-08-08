@@ -5,5 +5,6 @@ return [
     'twitter' => '<li><a href=":url" class="social-button :class" id=":id"><span class="fa fa-twitter"></span></a></li>',
     'gplus' => '<li><a href=":url" class="social-button :class" id=":id"><span class="fa fa-google-plus"></span></a></li>',
     'linkedin' => '<li><a href=":url" class="social-button :class" id=":id"><span class="fa fa-linkedin"></span></a></li>',
+    'pinterest' => '<li><a href=":url" class="social-button :class" id=":id"><span class="fa fa-pinterest-square"></span></a></li>',
 ];
  

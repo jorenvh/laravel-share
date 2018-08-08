@@ -28,6 +28,10 @@ return [
             'uri' => 'http://www.linkedin.com/shareArticle',
             'extra' => ['mini' => 'true']
         ],
+        'pinterest' => [
+            'uri' => 'http://pinterest.com/pin/create/button/',
+            'description' => 'The default Description Fallback'
+        ],
     ],
 
     /*
@@ -41,5 +45,5 @@ return [
     |
     */
 
-    'fontAwesomeVersion' => 4,
+    'fontAwesomeVersion' => 5,
 ];

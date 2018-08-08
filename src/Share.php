@@ -158,6 +158,21 @@ class Share
         return $this;
     }
 
+
+    public function pinterest($media = '', $description = null)
+    {
+        if (is_null($description)) {
+            $description = config('laravel-share.services.pinterest.description');
+        }
+
+        $base = config('laravel-share.services.pinterest.uri');
+        $url = $base . '?url=' . $this->url . '&media=' . urlencode($media) . '&description=' . urlencode($description);
+
+        $this->buildLink('pinterest', $url);
+
+        return $this;
+    }
+
     /**
      * Build a single link
      *
