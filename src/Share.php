@@ -140,6 +140,20 @@ class Share
 
         return $this;
     }
+    
+    /**
+     * Whatsapp share link
+     *
+     * @return $this
+     */
+    public function whatsapp()
+    {
+        $url = config('laravel-share.services.whatsapp.uri') . $this->url;
+
+        $this->buildLink('whatsapp', $url);
+
+        return $this;
+    }    
 
     /**
      * Linked in share link
