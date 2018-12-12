@@ -28,6 +28,10 @@ return [
             'uri' => 'http://www.linkedin.com/shareArticle',
             'extra' => ['mini' => 'true']
         ],
+        'whatsapp' => [
+            'uri' => 'https://wa.me/?text=',
+            'extra' => ['mini' => 'true']
+        ],         
     ],
 
     /*
