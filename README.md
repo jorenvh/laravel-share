@@ -121,8 +121,8 @@ Share::page('http://jorenvanhocht.be', 'Share title')
 	->facebook()
 	->twitter()
 	->googlePlus()
-    ->linkedin('Extra linkedin summary can be passed here')
-    ->whatsapp();
+	->linkedin('Extra linkedin summary can be passed here')
+	->whatsapp();
 ```
 
 This will generate the following html
