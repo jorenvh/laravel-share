@@ -135,7 +135,7 @@ class WhatsappShareTest extends TestCase
      */
     public function it_can_generate_a_whatsapp_share_link_with_all_extra_options()
     {
-        $result = ShareFacade::page('https://codeswitch.be', ['class' => 'my-class', 'id' => 'my-id'], '<ul>', '</ul>')
+        $result = ShareFacade::page('https://codeswitch.be', null, ['class' => 'my-class', 'id' => 'my-id'], '<ul>', '</ul>')
             ->whatsapp();
         $expected = '<ul><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fa fa-whatsapp"></span></a></li></ul>';
 
@@ -148,7 +148,7 @@ class WhatsappShareTest extends TestCase
     public function it_can_generate_a_whatsapp_share_link_with_all_extra_options_with_fa5()
     {
         config(['laravel-share.fontAwesomeVersion' => 5]);
-        $result = ShareFacade::page('https://codeswitch.be', ['class' => 'my-class', 'id' => 'my-id'], '<ul>', '</ul>')
+        $result = ShareFacade::page('https://codeswitch.be', null, ['class' => 'my-class', 'id' => 'my-id'], '<ul>', '</ul>')
             ->whatsapp();
         $expected = '<ul><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fab fa-whatsapp"></span></a></li></ul>';
 
