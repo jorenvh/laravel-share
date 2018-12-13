@@ -28,5 +28,18 @@ class WhatsappShareTest extends TestCase
 
         $this->assertEquals($expected, $result);
     }
+    
+    /**
+     * @test
+     */
+    public function it_can_generate_a_whatsapp_share_link_with_custom_share_text()
+    {
+        $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel')
+            ->twitter();
+        $expected = '<div id="social-links"><ul><li><a href="https://twitter.com/intent/tweet?text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel&url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-twitter"></span></a></li></ul></div>';
+
+        $this->assertEquals($expected, $result);
+    }
+    
 
 }
