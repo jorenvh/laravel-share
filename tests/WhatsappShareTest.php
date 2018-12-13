@@ -104,4 +104,31 @@ class WhatsappShareTest extends TestCase
         $this->assertEquals($expected, $result);
     }
 
+    
+    /**
+     * @test
+     */
+    public function it_can_generate_a_whatsapp_share_link_with_custom_prefix_and_suffix()
+    {
+        $result = ShareFacade::page('https://codeswitch.be', null, [], '<ul>', '</ul>')
+            ->whatsapp();
+        $expected = '<ul><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li></ul>';
+
+        $this->assertEquals($expected, $result);
+    }
+
+    /**
+     * @test
+     */
+    public function it_can_generate_a_whatsapp_share_link_with_custom_prefix_and_suffix_with_fa5()
+    {
+        config(['laravel-share.fontAwesomeVersion' => 5]);
+        $result = ShareFacade::page('https://codeswitch.be', null, [], '<ul>', '</ul>')
+            ->whatsapp();
+        $expected = '<ul><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button " id=""><span class="fab fa-whatsapp"></span></a></li></ul>';
+
+        $this->assertEquals($expected, $result);
+    }
+
+    
 }
