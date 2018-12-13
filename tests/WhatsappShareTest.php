@@ -12,7 +12,7 @@ class WhatsappShareTest extends TestCase
     public function it_can_generate_a_whatsapp_share_link_with_default_share_text()
     {
         $result = ShareFacade::page('https://codeswitch.be')->whatsapp();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" id=""><span class="fa fa-whatsapp"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="" id=""><span class="fa fa-whatsapp"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -24,7 +24,7 @@ class WhatsappShareTest extends TestCase
     {
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be')->whatsapp();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" id=""><span class="fab fa-whatsapp"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="" id=""><span class="fab fa-whatsapp"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
