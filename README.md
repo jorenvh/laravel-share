@@ -101,7 +101,7 @@ Share::page('http://jorenvanhocht.be', 'Share title')->linkedin('Extra linkedin 
 #### Whatsapp
 
 ``` php
-Share::page('http://jorenvanhocht.be', 'Share title')->whatsapp()
+Share::page('http://jorenvanhocht.be')->whatsapp()
 ```
 
 ### Sharing the current url
