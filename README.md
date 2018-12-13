@@ -121,7 +121,7 @@ Share::page('http://jorenvanhocht.be', 'Share title')
 	->facebook()
 	->twitter()
 	->googlePlus()
-	->linkedin('Extra linkedin summary can be passed here')
+    ->linkedin('Extra linkedin summary can be passed here')
     ->whatsapp();
 ```
 
