@@ -98,6 +98,12 @@ Share::page('http://jorenvanhocht.be')->googlePlus();
 Share::page('http://jorenvanhocht.be', 'Share title')->linkedin('Extra linkedin summary can be passed here')
 ```
 
+#### Whatsapp
+
+``` php
+Share::page('http://jorenvanhocht.be', 'Share title')->whatsapp()
+```
+
 ### Sharing the current url
 
 Instead of manually passing an url, you can opt to use the `currentPage` function.
@@ -115,7 +121,8 @@ Share::page('http://jorenvanhocht.be', 'Share title')
 	->facebook()
 	->twitter()
 	->googlePlus()
-	->linkedin('Extra linkedin summary can be passed here');
+	->linkedin('Extra linkedin summary can be passed here')
+    ->whatsapp();
 ```
 
 This will generate the following html
