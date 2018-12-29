@@ -15,6 +15,7 @@ With Laravel Share you can generate these links in just seconds in a way tailore
 * Twitter
 * Google Plus
 * Linkedin
+* Whatsapp
 
 ## Installation
 
@@ -97,6 +98,12 @@ Share::page('http://jorenvanhocht.be')->googlePlus();
 Share::page('http://jorenvanhocht.be', 'Share title')->linkedin('Extra linkedin summary can be passed here')
 ```
 
+#### Whatsapp
+
+``` php
+Share::page('http://jorenvanhocht.be')->whatsapp()
+```
+
 ### Sharing the current url
 
 Instead of manually passing an url, you can opt to use the `currentPage` function.
@@ -114,7 +121,8 @@ Share::page('http://jorenvanhocht.be', 'Share title')
 	->facebook()
 	->twitter()
 	->googlePlus()
-	->linkedin('Extra linkedin summary can be passed here');
+	->linkedin('Extra linkedin summary can be passed here')
+	->whatsapp();
 ```
 
 This will generate the following html
@@ -126,6 +134,7 @@ This will generate the following html
 		<li><a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
 		<li><a href="https://plus.google.com/share?url=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-google-plus"></span></a></li>
 		<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://jorenvanhocht.be&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
+		<li><a href="https://wa.me/?text=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li>    
 	</ul>
 </div>
 ```
