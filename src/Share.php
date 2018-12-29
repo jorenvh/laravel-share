@@ -140,7 +140,7 @@ class Share
 
         return $this;
     }
-    
+
     /**
      * Whatsapp share link
      *
@@ -153,7 +153,7 @@ class Share
         $this->buildLink('whatsapp', $url);
 
         return $this;
-    }    
+    }
 
     /**
      * Linked in share link

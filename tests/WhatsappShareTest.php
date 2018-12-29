@@ -28,7 +28,7 @@ class WhatsappShareTest extends TestCase
 
         $this->assertEquals($expected, $result);
     }
-    
+
     /**
      * @test
      */
@@ -104,7 +104,7 @@ class WhatsappShareTest extends TestCase
         $this->assertEquals($expected, $result);
     }
 
-    
+
     /**
      * @test
      */
@@ -153,5 +153,5 @@ class WhatsappShareTest extends TestCase
         $expected = '<ul><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fab fa-whatsapp"></span></a></li></ul>';
 
         $this->assertEquals($expected, $result);
-    }    
+    }
 }
