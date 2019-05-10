@@ -173,7 +173,7 @@ class Share
     }
 
     /**
-     * Facebook share link
+     * Pinterest share link
      *
      * @return $this
      */
