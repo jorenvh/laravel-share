@@ -173,6 +173,20 @@ class Share
     }
 
     /**
+     * Facebook share link
+     *
+     * @return $this
+     */
+    public function pinterest()
+    {
+        $url = config('laravel-share.services.pinterest.uri') . $this->url;
+
+        $this->buildLink('pinterest', $url);
+
+        return $this;
+    }
+
+    /**
      * Build a single link
      *
      * @param $provider
