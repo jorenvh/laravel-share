@@ -16,10 +16,12 @@ class CombinedShareTest extends TestCase
             ->twitter()
             ->linkedin()
             ->googlePlus()
-            ->whatsapp();
-
+            ->whatsapp()
+            ->pinterest();
+/*
         $expected = '<div id="social-links"><ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-twitter"></span></a></li><li><a href="http://www.linkedin.com/shareArticle?mini=true&url=https://codeswitch.be&title=My+share+title&summary=" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li><li><a href="https://plus.google.com/share?url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-google-plus"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li></ul></div>';
-
+*/
+        $expected = '<div id="social-links"><ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-twitter"></span></a></li><li><a href="http://www.linkedin.com/shareArticle?mini=true&url=https://codeswitch.be&title=My+share+title&summary=" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li><li><a href="https://plus.google.com/share?url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-google-plus"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li><li><a href="http://pinterest.com/pin/create/button/?url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-pinterest"></span></a></li></ul></div>';
         $this->assertEquals($expected, $result);
     }
 
@@ -34,10 +36,10 @@ class CombinedShareTest extends TestCase
             ->twitter()
             ->linkedin()
             ->googlePlus()
-            ->whatsapp();
+            ->whatsapp()
+            ->pinterest();
 
-        $expected = '<div id="social-links"><ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button " id=""><span class="fab fa-facebook-square"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button " id=""><span class="fab fa-twitter"></span></a></li><li><a href="http://www.linkedin.com/shareArticle?mini=true&url=https://codeswitch.be&title=My+share+title&summary=" class="social-button " id=""><span class="fab fa-linkedin"></span></a></li><li><a href="https://plus.google.com/share?url=https://codeswitch.be" class="social-button " id=""><span class="fab fa-google-plus-g"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button " id=""><span class="fab fa-whatsapp"></span></a></li></ul></div>';
-
+        $expected ='<div id="social-links"><ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button " id=""><span class="fab fa-facebook-square"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button " id=""><span class="fab fa-twitter"></span></a></li><li><a href="http://www.linkedin.com/shareArticle?mini=true&url=https://codeswitch.be&title=My+share+title&summary=" class="social-button " id=""><span class="fab fa-linkedin"></span></a></li><li><a href="https://plus.google.com/share?url=https://codeswitch.be" class="social-button " id=""><span class="fab fa-google-plus-g"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button " id=""><span class="fab fa-whatsapp"></span></a></li><li><a href="http://pinterest.com/pin/create/button/?url=https://codeswitch.be" class="social-button " id=""><span class="fab fa-pinterest"></span></a></li></ul></div>';
         $this->assertEquals($expected, $result);
     }
 
@@ -51,8 +53,10 @@ class CombinedShareTest extends TestCase
             ->twitter()
             ->linkedin()
             ->googlePlus()
-            ->whatsapp();
-        $expected = '<div id="social-links"><ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-twitter"></span></a></li><li><a href="http://www.linkedin.com/shareArticle?mini=true&url=https://codeswitch.be&title=My+share+title&summary=" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li><li><a href="https://plus.google.com/share?url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-google-plus"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li></ul></div>';
+            ->whatsapp()
+            ->pinterest();
+
+        $expected = '<div id="social-links"><ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-twitter"></span></a></li><li><a href="http://www.linkedin.com/shareArticle?mini=true&url=https://codeswitch.be&title=My+share+title&summary=" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li><li><a href="https://plus.google.com/share?url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-google-plus"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li><li><a href="http://pinterest.com/pin/create/button/?url=https://codeswitch.be" class="social-button " id=""><span class="fa fa-pinterest"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
 
@@ -76,8 +80,10 @@ class CombinedShareTest extends TestCase
             ->twitter()
             ->linkedin()
             ->googlePlus()
-            ->whatsapp();
-        $expected = '<div id="social-links"><ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button " id=""><span class="fab fa-facebook-square"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button " id=""><span class="fab fa-twitter"></span></a></li><li><a href="http://www.linkedin.com/shareArticle?mini=true&url=https://codeswitch.be&title=My+share+title&summary=" class="social-button " id=""><span class="fab fa-linkedin"></span></a></li><li><a href="https://plus.google.com/share?url=https://codeswitch.be" class="social-button " id=""><span class="fab fa-google-plus-g"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button " id=""><span class="fab fa-whatsapp"></span></a></li></ul></div>';
+            ->whatsapp()
+            ->pinterest();
+
+        $expected = '<div id="social-links"><ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button " id=""><span class="fab fa-facebook-square"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button " id=""><span class="fab fa-twitter"></span></a></li><li><a href="http://www.linkedin.com/shareArticle?mini=true&url=https://codeswitch.be&title=My+share+title&summary=" class="social-button " id=""><span class="fab fa-linkedin"></span></a></li><li><a href="https://plus.google.com/share?url=https://codeswitch.be" class="social-button " id=""><span class="fab fa-google-plus-g"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button " id=""><span class="fab fa-whatsapp"></span></a></li><li><a href="http://pinterest.com/pin/create/button/?url=https://codeswitch.be" class="social-button " id=""><span class="fab fa-pinterest"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
 
@@ -98,9 +104,10 @@ class CombinedShareTest extends TestCase
         $result = ShareFacade::page('https://codeswitch.be', 'My share title', ['class' => 'my-class', 'id' => 'my-id'], '<ul>', '</ul>')
             ->facebook()
             ->twitter()
-            ->whatsapp();
+            ->whatsapp()
+            ->pinterest();
 
-        $expected = '<ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fa fa-facebook-official"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fa fa-twitter"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fa fa-whatsapp"></span></a></li></ul>';
+        $expected = '<ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fa fa-facebook-official"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fa fa-twitter"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fa fa-whatsapp"></span></a></li><li><a href="http://pinterest.com/pin/create/button/?url=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fa fa-pinterest"></span></a></li></ul>';
 
         $this->assertEquals($expected, $result);
     }
@@ -114,9 +121,12 @@ class CombinedShareTest extends TestCase
         $result = ShareFacade::page('https://codeswitch.be', 'My share title', ['class' => 'my-class', 'id' => 'my-id'], '<ul>', '</ul>')
             ->facebook()
             ->twitter()
-            ->whatsapp();
+            ->whatsapp()
+            ->pinterest();
 
         $expected = '<ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fab fa-facebook-square"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fab fa-twitter"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fab fa-whatsapp"></span></a></li></ul>';
+
+        $expected = '<ul><li><a href="https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fab fa-facebook-square"></span></a></li><li><a href="https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fab fa-twitter"></span></a></li><li><a target="_blank" href="https://wa.me/?text=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fab fa-whatsapp"></span></a></li><li><a href="http://pinterest.com/pin/create/button/?url=https://codeswitch.be" class="social-button my-class" id="my-id"><span class="fab fa-pinterest"></span></a></li></ul>';
 
         $this->assertEquals($expected, $result);
     }
