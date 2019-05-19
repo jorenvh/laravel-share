@@ -31,7 +31,10 @@ return [
         'whatsapp' => [
             'uri' => 'https://wa.me/?text=',
             'extra' => ['mini' => 'true']
-        ],         
+        ],
+        'pinterest' => [
+            'uri' => 'http://pinterest.com/pin/create/button/?url='
+        ],
     ],
 
     /*
