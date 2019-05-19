@@ -31,3 +31,6 @@ All Notable changes to `laravel-share` will be documented in this file
 
 ## 2.0.3 - 2018-12-29
 - Add Whatsapp share provider
+
+## 2.0.4 - 2019-05-19
+- Add Pinterest share provider
