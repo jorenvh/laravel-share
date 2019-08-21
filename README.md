@@ -13,7 +13,6 @@ With Laravel Share you can generate these links in just seconds in a way tailore
 
 * Facebook
 * Twitter
-* Google Plus
 * Linkedin
 * Whatsapp
 
