@@ -85,12 +85,6 @@ Share::page('http://jorenvanhocht.be')->facebook();
 Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->twitter();
 ```
 
-#### Google Plus
-
-``` php
-Share::page('http://jorenvanhocht.be')->googlePlus();
-```
-
 #### Linkedin
 
 ``` php
@@ -119,7 +113,6 @@ If want multiple share links for (multiple) providers you can just chain the met
 Share::page('http://jorenvanhocht.be', 'Share title')
 	->facebook()
 	->twitter()
-	->googlePlus()
 	->linkedin('Extra linkedin summary can be passed here')
 	->whatsapp();
 ```
@@ -131,7 +124,6 @@ This will generate the following html
 	<ul>
 		<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
 		<li><a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
-		<li><a href="https://plus.google.com/share?url=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-google-plus"></span></a></li>
 		<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://jorenvanhocht.be&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
 		<li><a href="https://wa.me/?text=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-whatsapp"></span></a></li>    
 	</ul>
