@@ -34,3 +34,6 @@ All Notable changes to `laravel-share` will be documented in this file
 
 ## 2.0.4 - 2019-05-19
 - Add Pinterest share provider
+
+## 3.0.0 - 2019-08-28
+- Remove Google Plus share provider
