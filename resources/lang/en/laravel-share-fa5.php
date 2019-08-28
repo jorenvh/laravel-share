@@ -6,4 +6,5 @@ return [
     'linkedin' => '<li><a href=":url" class="social-button :class" id=":id"><span class="fab fa-linkedin"></span></a></li>',
     'whatsapp' => '<li><a target="_blank" href=":url" class="social-button :class" id=":id"><span class="fab fa-whatsapp"></span></a></li>',
     'pinterest' => '<li><a href=":url" class="social-button :class" id=":id"><span class="fab fa-pinterest"></span></a></li>',
+    'reddit' => '<li><a target="_blank" href=":url" class="social-button :class" id=":id"><span class="fab fa-reddit"></span></a></li>',
 ];
