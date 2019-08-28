@@ -82,7 +82,7 @@ class TwitterShareTest extends TestCase
     /**
      * @test
      */
-    public function it_can_generate_a_facebook_share_link_with_a_custom_id()
+    public function it_can_generate_a_twitter_share_link_with_a_custom_id()
     {
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['id' => 'my-id'])
             ->twitter();
@@ -94,7 +94,7 @@ class TwitterShareTest extends TestCase
     /**
      * @test
      */
-    public function it_can_generate_a_facebook_share_link_with_a_custom_id_with_fa5()
+    public function it_can_generate_a_twitter_share_link_with_a_custom_id_with_fa5()
     {
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['id' => 'my-id'])
@@ -107,7 +107,7 @@ class TwitterShareTest extends TestCase
     /**
      * @test
      */
-    public function it_can_generate_a_facebook_share_link_with_a_custom_class_and_custom_id()
+    public function it_can_generate_a_twitter_share_link_with_a_custom_class_and_custom_id()
     {
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class', 'id' => 'my-id'])
             ->twitter();
@@ -119,7 +119,7 @@ class TwitterShareTest extends TestCase
     /**
      * @test
      */
-    public function it_can_generate_a_facebook_share_link_with_a_custom_class_and_custom_id_with_fa5()
+    public function it_can_generate_a_twitter_share_link_with_a_custom_class_and_custom_id_with_fa5()
     {
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class', 'id' => 'my-id'])
@@ -132,7 +132,7 @@ class TwitterShareTest extends TestCase
     /**
      * @test
      */
-    public function it_can_generate_a_facebook_share_link_with_custom_prefix_and_suffix()
+    public function it_can_generate_a_twitter_share_link_with_custom_prefix_and_suffix()
     {
         $result = ShareFacade::page('https://codeswitch.be', null, [], '<ul>', '</ul>')
             ->twitter();
@@ -144,7 +144,7 @@ class TwitterShareTest extends TestCase
     /**
      * @test
      */
-    public function it_can_generate_a_facebook_share_link_with_custom_prefix_and_suffix_with_fa5()
+    public function it_can_generate_a_twitter_share_link_with_custom_prefix_and_suffix_with_fa5()
     {
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be', null, [], '<ul>', '</ul>')
@@ -157,7 +157,7 @@ class TwitterShareTest extends TestCase
     /**
      * @test
      */
-    public function it_can_generate_a_facebook_share_link_with_all_extra_options()
+    public function it_can_generate_a_twitter_share_link_with_all_extra_options()
     {
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class', 'id' => 'my-id'], '<ul>', '</ul>')
             ->twitter();
@@ -169,7 +169,7 @@ class TwitterShareTest extends TestCase
     /**
      * @test
      */
-    public function it_can_generate_a_facebook_share_link_with_all_extra_options_with_fa5()
+    public function it_can_generate_a_twitter_share_link_with_all_extra_options_with_fa5()
     {
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class', 'id' => 'my-id'], '<ul>', '</ul>')
