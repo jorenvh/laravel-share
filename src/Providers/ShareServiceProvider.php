@@ -19,11 +19,11 @@ class ShareServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__ . '/../../public/js/share.js' => public_path('js/share.js')
+            __DIR__ . '/../../public/js/share.js' => public_path('js/share.js'),
         ], 'assets');
 
         $this->publishes([
-            __DIR__ . '/../../resources/lang/' => resource_path('lang/vendor/laravel-share')
+            __DIR__ . '/../../resources/lang/' => resource_path('lang/vendor/laravel-share'),
         ], 'translations');
 
     }

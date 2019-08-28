@@ -19,18 +19,18 @@ return [
         ],
         'twitter' => [
             'uri' => 'https://twitter.com/intent/tweet',
-            'text' => 'Default share text'
+            'text' => 'Default share text',
         ],
         'linkedin' => [
             'uri' => 'http://www.linkedin.com/shareArticle',
-            'extra' => ['mini' => 'true']
+            'extra' => ['mini' => 'true'],
         ],
         'whatsapp' => [
             'uri' => 'https://wa.me/?text=',
-            'extra' => ['mini' => 'true']
+            'extra' => ['mini' => 'true'],
         ],
         'pinterest' => [
-            'uri' => 'http://pinterest.com/pin/create/button/?url='
+            'uri' => 'http://pinterest.com/pin/create/button/?url=',
         ],
     ],
 
