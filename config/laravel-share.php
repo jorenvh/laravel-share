@@ -32,6 +32,10 @@ return [
         'pinterest' => [
             'uri' => 'http://pinterest.com/pin/create/button/?url=',
         ],
+        'reddit' => [
+            'uri' => 'https://www.reddit.com/submit',
+            'text' => 'Default share text',
+        ],
     ],
 
     /*
