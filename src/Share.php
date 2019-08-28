@@ -127,19 +127,6 @@ class Share
         return $this;
     }
 
-    /**
-     * Google Plus share link
-     *
-     * @return $this
-     */
-    public function googlePlus()
-    {
-        $url = config('laravel-share.services.gplus.uri') . $this->url;
-
-        $this->buildLink('gplus', $url);
-
-        return $this;
-    }
 
     /**
      * Whatsapp share link
