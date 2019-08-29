@@ -127,6 +127,20 @@ class Share
         return $this;
     }
 
+    public function reddit()
+    {
+        if (is_null($this->title)) {
+            $this->title = config('laravel-share.services.reddit.text');
+        }
+
+        $base = config('laravel-share.services.reddit.uri');
+        $url = $base . '?title=' . urlencode($this->title) . '&url=' . $this->url;
+
+        $this->buildLink('reddit', $url);
+
+        return $this;
+    }
+
 
     /**
      * Whatsapp share link
