@@ -127,6 +127,11 @@ class Share
         return $this;
     }
 
+    /**
+     * Reddit share link
+     * 
+     * @return $this
+     */
     public function reddit()
     {
         if (is_null($this->title)) {
@@ -141,6 +146,24 @@ class Share
         return $this;
     }
 
+    /**
+     * Telegram share link
+     * 
+     * @return $this
+     */
+    public function telegram()
+    {
+        if (is_null($this->title)) {
+            $this->title = config('laravel-share.services.telegram.text');
+        }
+
+        $base = config('laravel-share.services.telegram.uri');
+        $url = $base . '?url=' . $this->url . '&text=' . urlencode($this->title);
+
+        $this->buildLink('telegram', $url);
+
+        return $this;
+    }
 
     /**
      * Whatsapp share link
