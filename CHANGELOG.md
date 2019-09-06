@@ -37,3 +37,7 @@ All Notable changes to `laravel-share` will be documented in this file
 
 ## 3.0.0 - 2019-08-28
 - Remove Google Plus share provider
+
+## 3.1.0 - 2019-09-06
+- Add Redit share provider
+- Add Telegram share provider
