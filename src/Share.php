@@ -164,6 +164,26 @@ class Share
 
         return $this;
     }
+    
+    
+    /**
+     * Instagram share link
+     * 
+     * @return $this
+     */
+    public function instagram()
+    {
+        if (is_null($this->title)) {
+            $this->title = config('laravel-share.services.instagram.text');
+        }
+
+        $base = config('laravel-share.services.instagram.uri');
+        $url = $base . '?url=' . $this->url . '&text=' . urlencode($this->title);
+
+        $this->buildLink('instagram', $url);
+
+        return $this;
+    }
 
     /**
      * Whatsapp share link
