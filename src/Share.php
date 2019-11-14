@@ -129,7 +129,7 @@ class Share
 
     /**
      * Reddit share link
-     * 
+     *
      * @return $this
      */
     public function reddit()
@@ -148,7 +148,7 @@ class Share
 
     /**
      * Telegram share link
-     * 
+     *
      * @return $this
      */
     public function telegram()
@@ -224,6 +224,7 @@ class Share
             'url' => $url,
             'class' => key_exists('class', $this->options) ? $this->options['class'] : '',
             'id' => key_exists('id', $this->options) ? $this->options['id'] : '',
+            'title' => key_exists('title', $this->options) ? $this->options['title'] : '',
         ]);
 
     }
