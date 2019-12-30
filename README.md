@@ -147,12 +147,12 @@ This will generate the following html
 ```
 ### Optional parameters
 
-#### Add extra classes and id's to the social buttons
+#### Add extra classes, id's or titles to the social buttons
 
-You can simply add extra class(es) or id('s) by passing an array as the third parameter on the page method.
+You can simply add extra class(es), id('s) or title(s) by passing an array as the third parameter on the page method.
 
 ```php
-Share::page('http://jorenvanhocht.be', null, ['class' => 'my-class', 'id' => 'my-id'])
+Share::page('http://jorenvanhocht.be', null, ['class' => 'my-class', 'id' => 'my-id', 'title' => 'my-title'])
     ->facebook();
 ```
 
