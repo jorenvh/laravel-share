@@ -41,3 +41,6 @@ All Notable changes to `laravel-share` will be documented in this file
 ## 3.1.0 - 2019-09-06
 - Add Redit share provider
 - Add Telegram share provider
+
+## 3.2.0 - 2019-12-30
+- Add support for the title attribute. (credit to Bogdan Cismariu)
