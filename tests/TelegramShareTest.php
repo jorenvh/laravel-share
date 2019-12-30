@@ -12,7 +12,7 @@ class TelegramShareTest extends TestCase
     public function it_can_generate_a_telegram_share_link_with_default_share_text()
     {
         $result = ShareFacade::page('https://codeswitch.be')->telegram();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Default+share+text" class="social-button " id=""><span class="fa fa-telegram"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Default+share+text" class="social-button " id="" title=""><span class="fa fa-telegram"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -24,7 +24,7 @@ class TelegramShareTest extends TestCase
     {
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be')->telegram();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Default+share+text" class="social-button " id=""><span class="fab fa-telegram"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Default+share+text" class="social-button " id="" title=""><span class="fab fa-telegram"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -36,7 +36,7 @@ class TelegramShareTest extends TestCase
     {
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel')
             ->telegram();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button " id=""><span class="fa fa-telegram"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button " id="" title=""><span class="fa fa-telegram"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -49,7 +49,7 @@ class TelegramShareTest extends TestCase
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel')
             ->telegram();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button " id=""><span class="fab fa-telegram"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button " id="" title=""><span class="fab fa-telegram"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -61,7 +61,7 @@ class TelegramShareTest extends TestCase
     {
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class'])
             ->telegram();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id=""><span class="fa fa-telegram"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id="" title=""><span class="fa fa-telegram"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -74,7 +74,7 @@ class TelegramShareTest extends TestCase
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class'])
             ->telegram();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id=""><span class="fab fa-telegram"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id="" title=""><span class="fab fa-telegram"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -86,7 +86,7 @@ class TelegramShareTest extends TestCase
     {
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['id' => 'my-id'])
             ->telegram();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button " id="my-id"><span class="fa fa-telegram"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button " id="my-id" title=""><span class="fa fa-telegram"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -99,7 +99,7 @@ class TelegramShareTest extends TestCase
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['id' => 'my-id'])
             ->telegram();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button " id="my-id"><span class="fab fa-telegram"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button " id="my-id" title=""><span class="fab fa-telegram"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -111,7 +111,7 @@ class TelegramShareTest extends TestCase
     {
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class', 'id' => 'my-id'])
             ->telegram();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id="my-id"><span class="fa fa-telegram"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id="my-id" title=""><span class="fa fa-telegram"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -124,7 +124,7 @@ class TelegramShareTest extends TestCase
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class', 'id' => 'my-id'])
             ->telegram();
-        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id="my-id"><span class="fab fa-telegram"></span></a></li></ul></div>';
+        $expected = '<div id="social-links"><ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id="my-id" title=""><span class="fab fa-telegram"></span></a></li></ul></div>';
 
         $this->assertEquals($expected, $result);
     }
@@ -136,7 +136,7 @@ class TelegramShareTest extends TestCase
     {
         $result = ShareFacade::page('https://codeswitch.be', null, [], '<ul>', '</ul>')
             ->telegram();
-        $expected = '<ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Default+share+text" class="social-button " id=""><span class="fa fa-telegram"></span></a></li></ul>';
+        $expected = '<ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Default+share+text" class="social-button " id="" title=""><span class="fa fa-telegram"></span></a></li></ul>';
 
         $this->assertEquals($expected, $result);
     }
@@ -149,7 +149,7 @@ class TelegramShareTest extends TestCase
         config(['laravel-share.fontAwesomeVersion' => 5]);
         $result = ShareFacade::page('https://codeswitch.be', null, [], '<ul>', '</ul>')
             ->telegram();
-        $expected = '<ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Default+share+text" class="social-button " id=""><span class="fab fa-telegram"></span></a></li></ul>';
+        $expected = '<ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Default+share+text" class="social-button " id="" title=""><span class="fab fa-telegram"></span></a></li></ul>';
 
         $this->assertEquals($expected, $result);
     }
@@ -159,9 +159,9 @@ class TelegramShareTest extends TestCase
      */
     public function it_can_generate_a_telegram_share_link_with_all_extra_options()
     {
-        $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class', 'id' => 'my-id'], '<ul>', '</ul>')
+        $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class', 'id' => 'my-id', 'title' => 'My Title for SEO'], '<ul>', '</ul>')
             ->telegram();
-        $expected = '<ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id="my-id"><span class="fa fa-telegram"></span></a></li></ul>';
+        $expected = '<ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id="my-id" title="My Title for SEO"><span class="fa fa-telegram"></span></a></li></ul>';
 
         $this->assertEquals($expected, $result);
     }
@@ -172,9 +172,9 @@ class TelegramShareTest extends TestCase
     public function it_can_generate_a_telegram_share_link_with_all_extra_options_with_fa5()
     {
         config(['laravel-share.fontAwesomeVersion' => 5]);
-        $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class', 'id' => 'my-id'], '<ul>', '</ul>')
+        $result = ShareFacade::page('https://codeswitch.be', 'Meet Joren Van Hocht a php developer with a passion for laravel', ['class' => 'my-class', 'id' => 'my-id', 'title' => 'My Title for SEO'], '<ul>', '</ul>')
             ->telegram();
-        $expected = '<ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id="my-id"><span class="fab fa-telegram"></span></a></li></ul>';
+        $expected = '<ul><li><a target="_blank" href="https://telegram.me/share/url?url=https://codeswitch.be&text=Meet+Joren+Van+Hocht+a+php+developer+with+a+passion+for+laravel" class="social-button my-class" id="my-id" title="My Title for SEO"><span class="fab fa-telegram"></span></a></li></ul>';
 
         $this->assertEquals($expected, $result);
     }
