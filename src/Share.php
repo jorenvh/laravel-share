@@ -211,6 +211,20 @@ class Share
     }
 
     /**
+     * Whatsapp share link
+     *
+     * @return $this
+     */
+    public function copylink()
+    {
+        $url = $this->url;
+
+        $this->buildLink('copylink', $url);
+
+        return $this;
+    }
+
+    /**
      * Build a single link
      *
      * @param $provider

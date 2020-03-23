@@ -8,4 +8,5 @@ return [
     'pinterest' => '<li><a href=":url" class="social-button :class" id=":id" title=":title"><span class="fa fa-pinterest"></span></a></li>',
     'reddit' => '<li><a target="_blank" href=":url" class="social-button :class" id=":id" title=":title"><span class="fa fa-reddit"></span></a></li>',
     'telegram' => '<li><a target="_blank" href=":url" class="social-button :class" id=":id" title=":title"><span class="fa fa-telegram"></span></a></li>',
+    'copylink' => '<li><a target="_blank" href=":url" class="social-button :class" id=":id" title=":title" style="width: auto;padding-right: 1em;padding-left: 1em;">:url</a></li>',
 ];
