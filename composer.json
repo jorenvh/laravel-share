@@ -17,15 +17,8 @@
             "role": "Developer"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/alexsouzamarquezini/laravel-share"
-        }
-    ],
     "require": {
-        "php" : ">=7.1",
-        "jorenvanhocht/laravel-share": "dev-alex-master"
+        "php" : ">=7.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~6.5",
