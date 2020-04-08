@@ -31,14 +31,14 @@ class Share
      *
      * @var string
      */
-    protected $prefix = '<div id="social-links"><ul>';
+    protected $prefix = '';
 
     /**
      * Html to append after the share links
      *
      * @var string
      */
-    protected $suffix = '</ul></div>';
+    protected $suffix = '';
 
     /**
      * The generated html
@@ -46,6 +46,15 @@ class Share
      * @var string
      */
     protected $html = '';
+
+    /**
+     * Contructor method to get prefix and suffix from config file
+     */
+    public function __construct()
+    {
+        $this->prefix = config('laravel-share.styles.prefix','<div id="social-links"><ul>');
+        $this->suffix = config('laravel-share.styles.suffix', '</ul></div>');
+    }
 
     /**
      * Return a string with html at the end

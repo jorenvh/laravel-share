@@ -54,4 +54,20 @@ return [
     */
 
     'fontAwesomeVersion' => 4,
+
+    /*
+    |--------------------------------------------------------------------------
+    | style
+    |--------------------------------------------------------------------------
+    |
+    | Specify the styles for prefix and suffix.
+    |
+    |
+    |
+    */
+    'styles' => [
+        'prefix' => '<div id="social-links"><ul>',
+        'suffix' => '</ul></div>',
+    ],
+
 ];
