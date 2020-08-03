@@ -145,6 +145,37 @@ This will generate the following html
 	</ul>
 </div>
 ```
+
+### Returning only the built link without html
+
+If want only the built link of the social network just call the method onlyLink() after calling the network method.
+#####It also works with combined social networks by returning an array of links.
+```php
+Share::page('http://jorenvanhocht.be', 'Share title')
+	->facebook()
+	->onlyLInk();
+
+Share::page('http://jorenvanhocht.be', 'Share title')
+	->facebook()
+	->twitter()
+	->linkedin('Extra linkedin summary can be passed here')
+	->whatsapp()
+    ->onlyLink();
+```
+
+This will generate the following
+
+```html
+https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be
+
+array:4 [
+  "facebook" => "https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be"
+  "twitter" => "https://twitter.com/intent/tweet?text=Share+title&url=http://jorenvanhocht.be"
+  "linkedin" => "http://www.linkedin.com/shareArticle?mini=true&url=http://jorenvanhocht.be&title=Share+title&summary=Extra+linkedin+summary+can+be+passed+here"
+  "whatsapp" => "https://wa.me/?text=http://jorenvanhocht.be"
+]
+```
+
 ### Optional parameters
 
 #### Add extra classes, id's or titles to the social buttons
