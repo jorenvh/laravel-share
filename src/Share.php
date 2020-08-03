@@ -12,6 +12,13 @@ class Share
     protected $url;
 
     /**
+     * The social network's url's
+     *
+     * @var string
+     */
+    protected $socialNetworkUrls = [];
+
+    /**
      * Optional text for Twitter
      * and Linkedin title
      *
@@ -211,6 +218,16 @@ class Share
     }
 
     /**
+     * Social Network built link without html
+     *
+     * @return string|array
+     */
+    public function onlyLink()
+    {
+        return count($this->socialNetworkUrls) === 1 ? array_first($this->socialNetworkUrls) : $this->socialNetworkUrls;
+    }
+
+    /**
      * Build a single link
      *
      * @param $provider
@@ -219,6 +236,8 @@ class Share
     protected function buildLink($provider, $url)
     {
         $fontAwesomeVersion = config('laravel-share.fontAwesomeVersion', 4);
+
+        $this->setSocialNetworkUrl($provider, $url);
 
         $this->html .= trans("laravel-share::laravel-share-fa$fontAwesomeVersion.$provider", [
             'url' => $url,
@@ -244,5 +263,15 @@ class Share
         if (!is_null($suffix)) {
             $this->suffix = $suffix;
         }
+    }
+
+    /**
+     * @param $socialNetworkUrl
+     *
+     * @return void
+     */
+    protected function setSocialNetworkUrl($provider, $socialNetworkUrl)
+    {
+        $this->socialNetworkUrls[$provider] = $socialNetworkUrl;
     }
 }
