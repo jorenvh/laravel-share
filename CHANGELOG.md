@@ -44,3 +44,6 @@ All Notable changes to `laravel-share` will be documented in this file
 
 ## 3.2.0 - 2019-12-30
 - Add support for the title attribute. (credit to Bogdan Cismariu)
+
+## 3.3.0 - 2020-09-11
+- Add `getRawLinks` method to only return the raw links
