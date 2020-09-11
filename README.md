@@ -148,7 +148,7 @@ This will generate the following html
 
 ### Getting the raw links
 
-In some cases you may only need the raw links withouth any html, you can get these by calling the `getRawLinks` method.
+In some cases you may only need the raw links without any html, you can get these by calling the `getRawLinks` method.
 
 **A single link**
 ```php
