@@ -12,11 +12,11 @@ class Share
     protected $url;
 
     /**
-     * The social network's url's
+     * The generated urls
      *
      * @var string
      */
-    protected $socialNetworkUrls = [];
+    protected $generatedUrs = [];
 
     /**
      * Optional text for Twitter
@@ -218,13 +218,17 @@ class Share
     }
 
     /**
-     * Social Network built link without html
+     * Get the raw generated links.
      *
      * @return string|array
      */
-    public function onlyLink()
+    public function getRawLinks()
     {
-        return count($this->socialNetworkUrls) === 1 ? array_first($this->socialNetworkUrls) : $this->socialNetworkUrls;
+        if(count($this->generatedUrs) === 1) {
+            return array_first($this->generatedUrs);
+        }
+
+        return $this->generatedUrs;
     }
 
     /**
@@ -237,7 +241,7 @@ class Share
     {
         $fontAwesomeVersion = config('laravel-share.fontAwesomeVersion', 4);
 
-        $this->setSocialNetworkUrl($provider, $url);
+        $this->rememberRawLink($provider, $url);
 
         $this->html .= trans("laravel-share::laravel-share-fa$fontAwesomeVersion.$provider", [
             'url' => $url,
@@ -266,12 +270,11 @@ class Share
     }
 
     /**
+     * @param $provider
      * @param $socialNetworkUrl
-     *
-     * @return void
      */
-    protected function setSocialNetworkUrl($provider, $socialNetworkUrl)
+    protected function rememberRawLink($provider, $socialNetworkUrl)
     {
-        $this->socialNetworkUrls[$provider] = $socialNetworkUrl;
+        $this->generatedUrs[$provider] = $socialNetworkUrl;
     }
 }
