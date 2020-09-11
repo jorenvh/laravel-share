@@ -16,7 +16,7 @@ class Share
      *
      * @var string
      */
-    protected $generatedUrs = [];
+    protected $generatedUrls = [];
 
     /**
      * Optional text for Twitter
@@ -224,11 +224,11 @@ class Share
      */
     public function getRawLinks()
     {
-        if(count($this->generatedUrs) === 1) {
-            return array_first($this->generatedUrs);
+        if(count($this->generatedUrls) === 1) {
+            return array_first($this->generatedUrls);
         }
 
-        return $this->generatedUrs;
+        return $this->generatedUrls;
     }
 
     /**
@@ -275,6 +275,6 @@ class Share
      */
     protected function rememberRawLink($provider, $socialNetworkUrl)
     {
-        $this->generatedUrs[$provider] = $socialNetworkUrl;
+        $this->generatedUrls[$provider] = $socialNetworkUrl;
     }
 }
