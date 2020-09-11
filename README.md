@@ -145,6 +145,46 @@ This will generate the following html
 	</ul>
 </div>
 ```
+
+### Getting the raw links
+
+In some cases you may only need the raw links without any html, you can get these by calling the `getRawLinks` method.
+
+**A single link**
+```php
+Share::page('http://jorenvanhocht.be', 'Share title')
+	->facebook()
+	->getRawLinks();
+```
+
+Outputs:
+
+```html 
+https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be
+```
+
+**Multiple links**
+
+```php
+Share::page('http://jorenvanhocht.be', 'Share title')
+	->facebook()
+	->twitter()
+	->linkedin('Extra linkedin summary can be passed here')
+	->whatsapp()
+    ->onlyLink();
+```
+
+Outputs:
+
+```
+[
+  "facebook" => "https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be",
+  "twitter" => "https://twitter.com/intent/tweet?text=Share+title&url=http://jorenvanhocht.be",
+  "linkedin" => "http://www.linkedin.com/shareArticle?mini=true&url=http://jorenvanhocht.be&title=Share+title&summary=Extra+linkedin+summary+can+be+passed+here",
+  "whatsapp" => "https://wa.me/?text=http://jorenvanhocht.be",
+]
+```
+
 ### Optional parameters
 
 #### Add extra classes, id's or titles to the social buttons
