@@ -50,3 +50,15 @@ All Notable changes to `laravel-share` will be documented in this file
 
 ## 3.3.1 - 2020-09-19
 - use `Arr::first` instead of `array_first` helper
+
+## 4.0.0 - 2021-01-09
+Breaking changes:
+
+- The minimum required php version is now php 7.3
+- Dropped out of the box support for Font Awesome 5
+- Upgraded phpunit unit version to v9.4
+
+Other changes:
+- Updated the Linkedin base url to the 2020 version
+- Updated the Pintreset base url to use https 
+
