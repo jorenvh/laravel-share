@@ -241,7 +241,7 @@ class Share
      */
     protected function buildLink($provider, $url)
     {
-        $fontAwesomeVersion = config('laravel-share.fontAwesomeVersion', 4);
+        $fontAwesomeVersion = config('laravel-share.fontAwesomeVersion', 5);
 
         $this->rememberRawLink($provider, $url);
 

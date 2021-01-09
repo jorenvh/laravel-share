@@ -22,7 +22,7 @@ return [
             'text' => 'Default share text',
         ],
         'linkedin' => [
-            'uri' => 'http://www.linkedin.com/shareArticle',
+            'uri' => 'https://www.linkedin.com/sharing/share-offsite', // oud: http://www.linkedin.com/shareArticle
             'extra' => ['mini' => 'true'],
         ],
         'whatsapp' => [
@@ -30,7 +30,7 @@ return [
             'extra' => ['mini' => 'true'],
         ],
         'pinterest' => [
-            'uri' => 'http://pinterest.com/pin/create/button/?url=',
+            'uri' => 'https://pinterest.com/pin/create/button/?url=',
         ],
         'reddit' => [
             'uri' => 'https://www.reddit.com/submit',
@@ -53,5 +53,5 @@ return [
     |
     */
 
-    'fontAwesomeVersion' => 4,
+    'fontAwesomeVersion' => 5,
 ];

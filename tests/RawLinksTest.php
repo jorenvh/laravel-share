@@ -16,7 +16,7 @@ class RawLinksTest extends TestCase
             ->facebook()
             ->getRawLinks();
 
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, (string)$result);
     }
 
     /** @test */
@@ -27,18 +27,18 @@ class RawLinksTest extends TestCase
             ->twitter()
             ->getRawLinks();
 
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, (string)$result);
     }
 
     /** @test */
     public function it_can_return_only_linkedin_built_link()
     {
-        $expected = 'http://www.linkedin.com/shareArticle?mini=true&url=https://codeswitch.be&title=My+share+title&summary=';
+        $expected = 'https://www.linkedin.com/sharing/share-offsite?mini=true&url=https://codeswitch.be&title=My+share+title&summary=';
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->linkedin()
             ->getRawLinks();
 
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, (string)$result);
     }
 
     /** @test */
@@ -49,18 +49,18 @@ class RawLinksTest extends TestCase
             ->whatsapp()
             ->getRawLinks();
 
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, (string)$result);
     }
 
     /** @test */
     public function it_can_return_only_pinterest_built_link()
     {
-        $expected = 'http://pinterest.com/pin/create/button/?url=https://codeswitch.be';
+        $expected = 'https://pinterest.com/pin/create/button/?url=https://codeswitch.be';
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->pinterest()
             ->getRawLinks();
 
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, (string)$result);
     }
 
     /** @test */
@@ -71,7 +71,7 @@ class RawLinksTest extends TestCase
             ->reddit()
             ->getRawLinks();
 
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, (string)$result);
     }
 
     /** @test */
@@ -82,7 +82,7 @@ class RawLinksTest extends TestCase
             ->telegram()
             ->getRawLinks();
 
-        $this->assertEquals($expected, $result);
+        $this->assertEquals($expected, (string)$result);
     }
 
     /** @test */
@@ -101,9 +101,9 @@ class RawLinksTest extends TestCase
         $expected = [
             'facebook' => 'https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be',
             'twitter' => 'https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be',
-            'linkedin' => 'http://www.linkedin.com/shareArticle?mini=true&url=https://codeswitch.be&title=My+share+title&summary=',
+            'linkedin' => 'https://www.linkedin.com/sharing/share-offsite?mini=true&url=https://codeswitch.be&title=My+share+title&summary=',
             'whatsapp' => 'https://wa.me/?text=https://codeswitch.be',
-            'pinterest' => 'http://pinterest.com/pin/create/button/?url=https://codeswitch.be',
+            'pinterest' => 'https://pinterest.com/pin/create/button/?url=https://codeswitch.be',
             'reddit' => 'https://www.reddit.com/submit?title=My+share+title&url=https://codeswitch.be',
             'telegram' => 'https://telegram.me/share/url?url=https://codeswitch.be&text=My+share+title',
         ];
