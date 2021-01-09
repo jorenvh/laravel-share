@@ -32,7 +32,6 @@ If you don't use auto-discovery, add the ServiceProvider to the providers array 
 ```php
 // config/app.php
 'providers' => [
-    ...
     Jorenvh\Share\Providers\ShareServiceProvider::class,
 ];
 ```
@@ -42,7 +41,6 @@ And optionally add the facade in config/app.php
 ```php
 // config/app.php
 'aliases' => [
-    ...
     'Share' => Jorenvh\Share\ShareFacade::class,
 ];
 ```
@@ -62,14 +60,14 @@ This will publish the ```laravel-share.php``` config file to your config folder,
 Since this package relies on Fontawesome, you will have to require it's css, js & fonts in your app.
 You can do that by requesting a embed code [via their website](http://fontawesome.io/get-started/) or by installing it locally in your project.
 
-Laravel share supports Font Awesome v4 and v5, by default v4 is used. You can specify the version you want to use in ```config/laravel-share.php```
+Laravel share supports Font Awesome v5. For Font Awsome 4 support use version [3](https://github.com/jorenvh/laravel-share/tree/3.3.1) of this package. 
 
 ### Javascript
 
 Load jquery.min.js & share.js by adding the following lines to your template files.
 
 ```html
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 <script src="{{ asset('js/share.js') }}"></script>
 ```
 
