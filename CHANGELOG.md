@@ -55,7 +55,7 @@ All Notable changes to `laravel-share` will be documented in this file
 Breaking changes:
 
 - The minimum required php version is now php 7.3
-- Dropped out of the box support for Font Awesome 5
+- Dropped out of the box support for Font Awesome 4
 - Upgraded phpunit unit version to v9.4
 
 Other changes:
