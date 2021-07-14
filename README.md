@@ -187,10 +187,10 @@ Outputs:
 
 #### Add extra classes, id's or titles to the social buttons
 
-You can simply add extra class(es), id('s) or title(s) by passing an array as the third parameter on the page method.
+You can simply add extra class(es), id('s), title(s) or relationship(s) by passing an array as the third parameter on the page method.
 
 ```php
-Share::page('http://jorenvanhocht.be', null, ['class' => 'my-class', 'id' => 'my-id', 'title' => 'my-title'])
+Share::page('http://jorenvanhocht.be', null, ['class' => 'my-class', 'id' => 'my-id', 'title' => 'my-title', 'rel' => 'nofollow noopener noreferrer'])
     ->facebook();
 ```
 
@@ -199,7 +199,7 @@ Which will result in the following html
 ```html
 <div id="social-links">
 	<ul>
-		<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button my-class" id="my-id"><span class="fa fa-facebook-official"></span></a></li>
+		<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button my-class" id="my-id" rel="nofollow noopener noreferrer"><span class="fa fa-facebook-official"></span></a></li>
 	</ul>
 </div>
 ```

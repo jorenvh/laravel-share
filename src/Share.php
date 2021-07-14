@@ -250,6 +250,7 @@ class Share
             'class' => key_exists('class', $this->options) ? $this->options['class'] : '',
             'id' => key_exists('id', $this->options) ? $this->options['id'] : '',
             'title' => key_exists('title', $this->options) ? $this->options['title'] : '',
+            'rel' => key_exists('rel', $this->options) ? $this->options['rel'] : '',
         ]);
 
     }
