@@ -62,3 +62,5 @@ Other changes:
 - Updated the Linkedin base url to the 2020 version
 - Updated the Pintreset base url to use https 
 
+## 4.1.0 - 2021-08-09
+- Added support for "rel" attribute on the generated share links
