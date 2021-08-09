@@ -169,7 +169,7 @@ Share::page('http://jorenvanhocht.be', 'Share title')
 	->twitter()
 	->linkedin('Extra linkedin summary can be passed here')
 	->whatsapp()
-    ->onlyLink();
+    ->getRawLinks();
 ```
 
 Outputs:
