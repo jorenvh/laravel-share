@@ -17,6 +17,7 @@ With Laravel Share you can generate these links in just seconds in a way tailore
 * WhatsApp
 * Reddit
 * Telegram
+* Email
 
 ## Installation
 
@@ -109,6 +110,12 @@ Share::page('http://jorenvanhocht.be')->whatsapp()
 
 ``` php
 Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->telegram();
+```
+
+#### Email
+
+``` php
+Share::page('http://jorenvanhocht.be', 'Share title')->email('Subject passed here', 'Body passed here')
 ```
 
 ### Sharing the current url

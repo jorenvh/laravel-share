@@ -220,6 +220,18 @@ class Share
     }
 
     /**
+     * Email share link
+     *
+     * @return $this
+     */
+    public function email($subject = '', $body = '')
+    {
+        $url = 'mailto:?subject=' . $subject . '&body=' . $body;
+        $this->buildLink('email', $url);
+        return $this;
+    }
+
+    /**
      * Get the raw generated links.
      *
      * @return string|array

@@ -8,4 +8,5 @@ return [
     'pinterest' => '<li><a href=":url" class="social-button :class" id=":id" title=":title" rel=":rel"><span class="fab fa-pinterest"></span></a></li>',
     'reddit' => '<li><a target="_blank" href=":url" class="social-button :class" id=":id" title=":title" rel=":rel"><span class="fab fa-reddit"></span></a></li>',
     'telegram' => '<li><a target="_blank" href=":url" class="social-button :class" id=":id" title=":title" rel=":rel"><span class="fab fa-telegram"></span></a></li>',
+    'email' => '<li><a href=":url" title=":title"><span class="far fa-envelope"></span></a></li>',
 ];
