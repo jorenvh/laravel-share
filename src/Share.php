@@ -108,7 +108,7 @@ class Share
      *
      * @return $this
      */
-    public function facebook()
+    public function facebook($options = [])
     {
         $url = config('laravel-share.services.facebook.uri') . $this->url;
 
@@ -122,7 +122,7 @@ class Share
      *
      * @return $this
      */
-    public function twitter()
+    public function twitter($options = [])
     {
         if (is_null($this->title)) {
             $this->title = config('laravel-share.services.twitter.text');
@@ -131,7 +131,7 @@ class Share
         $base = config('laravel-share.services.twitter.uri');
         $url = $base . '?text=' . urlencode($this->title) . '&url=' . $this->url;
 
-        $this->buildLink('twitter', $url);
+        $this->buildLink('twitter', $url, $options);
 
         return $this;
     }
@@ -141,7 +141,7 @@ class Share
      *
      * @return $this
      */
-    public function reddit()
+    public function reddit($options = [])
     {
         if (is_null($this->title)) {
             $this->title = config('laravel-share.services.reddit.text');
@@ -150,7 +150,7 @@ class Share
         $base = config('laravel-share.services.reddit.uri');
         $url = $base . '?title=' . urlencode($this->title) . '&url=' . $this->url;
 
-        $this->buildLink('reddit', $url);
+        $this->buildLink('reddit', $url, $options);
 
         return $this;
     }
@@ -160,7 +160,7 @@ class Share
      *
      * @return $this
      */
-    public function telegram()
+    public function telegram($options = [])
     {
         if (is_null($this->title)) {
             $this->title = config('laravel-share.services.telegram.text');
@@ -169,7 +169,7 @@ class Share
         $base = config('laravel-share.services.telegram.uri');
         $url = $base . '?url=' . $this->url . '&text=' . urlencode($this->title);
 
-        $this->buildLink('telegram', $url);
+        $this->buildLink('telegram', $url, $options);
 
         return $this;
     }
@@ -179,11 +179,11 @@ class Share
      *
      * @return $this
      */
-    public function whatsapp()
+    public function whatsapp($options = [])
     {
         $url = config('laravel-share.services.whatsapp.uri') . $this->url;
 
-        $this->buildLink('whatsapp', $url);
+        $this->buildLink('whatsapp', $url, $options);
 
         return $this;
     }
@@ -194,13 +194,13 @@ class Share
      * @param string $summary
      * @return $this
      */
-    public function linkedin($summary = '')
+    public function linkedin($summary = '', $options = [])
     {
         $base = config('laravel-share.services.linkedin.uri');
         $mini = config('laravel-share.services.linkedin.extra.mini');
         $url = $base . '?mini=' . $mini . '&url=' . $this->url . '&title=' . urlencode($this->title) . '&summary=' . urlencode($summary);
 
-        $this->buildLink('linkedin', $url);
+        $this->buildLink('linkedin', $url, $options);
 
         return $this;
     }
@@ -210,11 +210,11 @@ class Share
      *
      * @return $this
      */
-    public function pinterest()
+    public function pinterest($options = [])
     {
         $url = config('laravel-share.services.pinterest.uri') . $this->url;
 
-        $this->buildLink('pinterest', $url);
+        $this->buildLink('pinterest', $url, $options);
 
         return $this;
     }
@@ -224,10 +224,10 @@ class Share
      *
      * @return $this
      */
-    public function email($subject = '', $body = '')
+    public function email($subject = '', $body = '', $options = [])
     {
         $url = 'mailto:?subject=' . $subject . '&body=' . $body;
-        $this->buildLink('email', $url);
+        $this->buildLink('email', $url, $options);
         return $this;
     }
 
@@ -251,18 +251,20 @@ class Share
      * @param $provider
      * @param $url
      */
-    protected function buildLink($provider, $url)
+    protected function buildLink($provider, $url, $options)
     {
+        $options = array_merge($options, $this->options);
+
         $fontAwesomeVersion = config('laravel-share.fontAwesomeVersion', 5);
 
         $this->rememberRawLink($provider, $url);
 
         $this->html .= trans("laravel-share::laravel-share-fa$fontAwesomeVersion.$provider", [
             'url' => $url,
-            'class' => key_exists('class', $this->options) ? $this->options['class'] : '',
-            'id' => key_exists('id', $this->options) ? $this->options['id'] : '',
-            'title' => key_exists('title', $this->options) ? $this->options['title'] : '',
-            'rel' => key_exists('rel', $this->options) ? $this->options['rel'] : '',
+            'class' => key_exists('class', $options) ? $options['class'] : '',
+            'id' => key_exists('id', $options) ? $options['id'] : '',
+            'title' => key_exists('title', $options) ? $options['title'] : '',
+            'rel' => key_exists('rel', $options) ? $options['rel'] : '',
         ]);
 
     }

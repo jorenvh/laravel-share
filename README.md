@@ -85,37 +85,37 @@ Share::page('http://jorenvanhocht.be')->facebook();
 #### Twitter
 
 ``` php
-Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->twitter();
+Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->twitter([options]);
 ```
 
 #### Reddit
 
 ``` php
-Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->reddit();
+Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->reddit('Options');
 ```
 
 #### Linkedin
 
 ``` php
-Share::page('http://jorenvanhocht.be', 'Share title')->linkedin('Extra linkedin summary can be passed here')
+Share::page('http://jorenvanhocht.be', 'Share title')->linkedin('Extra linkedin summary can be passed here', [options])
 ```
 
 #### Whatsapp
 
 ``` php
-Share::page('http://jorenvanhocht.be')->whatsapp()
+Share::page('http://jorenvanhocht.be')->whatsapp([options])
 ```
 
 #### Telegram
 
 ``` php
-Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->telegram();
+Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->telegram([options]);
 ```
 
 #### Email
 
 ``` php
-Share::page('http://jorenvanhocht.be', 'Share title')->email('Subject passed here', 'Body passed here')
+Share::page('http://jorenvanhocht.be', 'Share title')->email('Subject passed here', 'Body passed here', [options])
 ```
 
 ### Sharing the current url
@@ -209,6 +209,17 @@ Which will result in the following html
 		<li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button my-class" id="my-id" rel="nofollow noopener noreferrer"><span class="fa fa-facebook-official"></span></a></li>
 	</ul>
 </div>
+```
+
+### Optional parameters per service
+
+#### Add extra classes, id's or titles to a specific social button
+
+You can pass an options array to each service with extra class(es), id('s), title(s) or relationship(s). These options will override the options on the page method
+
+```php
+Share::page('http://jorenvanhocht.be', null, ['class' => 'my-class', 'id' => 'my-id', 'title' => 'my-title', 'rel' => 'nofollow noopener noreferrer'])
+    ->facebook(['title' => 'Share on Facebook']);
 ```
 
 #### Custom wrapping
