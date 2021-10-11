@@ -72,10 +72,10 @@ class Share
 
     /**
      * @param $url
-     * @param null $title
+     * @param string|null $title
      * @param array $options
-     * @param null $prefix
-     * @param null $suffix
+     * @param string|null $prefix
+     * @param string|null $suffix
      * @return $this
      */
     public function page($url, $title = null, $options = [], $prefix = null, $suffix = null)
@@ -90,10 +90,10 @@ class Share
     }
 
     /**
-     * @param null $title
+     * @param string|null $title
      * @param array $options
-     * @param null $prefix
-     * @param null $suffix
+     * @param string|null $prefix
+     * @param string|null $suffix
      * @return $this
      */
     public function currentPage($title = null, $options = [], $prefix = null, $suffix = null)
@@ -236,8 +236,8 @@ class Share
     /**
      * Build a single link
      *
-     * @param $provider
-     * @param $url
+     * @param string $provider
+     * @param string $url
      */
     protected function buildLink($provider, $url)
     {
@@ -258,8 +258,8 @@ class Share
     /**
      * Optionally Set custom prefix and/or suffix
      *
-     * @param $prefix
-     * @param $suffix
+     * @param string $prefix
+     * @param string $suffix
      */
     protected function setPrefixAndSuffix($prefix, $suffix)
     {
@@ -273,8 +273,8 @@ class Share
     }
 
     /**
-     * @param $provider
-     * @param $socialNetworkUrl
+     * @param string $provider
+     * @param string $socialNetworkUrl
      */
     protected function rememberRawLink($provider, $socialNetworkUrl)
     {
