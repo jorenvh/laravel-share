@@ -218,6 +218,20 @@ class Share
 
         return $this;
     }
+    
+    /**
+     * Viber share link
+     *
+     * @return $this
+     */
+    public function viber()
+    {
+        $url = config('laravel-share.services.viber.uri') . $this->url;
+
+        $this->buildLink('viber', $url);
+
+        return $this;
+    }
 
     /**
      * Get the raw generated links.
