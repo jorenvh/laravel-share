@@ -71,7 +71,7 @@ class Share
     }
 
     /**
-     * @param $url
+     * @param string $url
      * @param string|null $title
      * @param array $options
      * @param string|null $prefix
