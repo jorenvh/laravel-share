@@ -2,8 +2,6 @@
 
 namespace Jorenvh\Share;
 
-use Illuminate\Support\Arr;
-
 class Share
 {
     /**
@@ -227,7 +225,7 @@ class Share
     public function getRawLinks()
     {
         if(count($this->generatedUrls) === 1) {
-            return Arr::first($this->generatedUrls);
+            return (string)current($this->generatedUrls);
         }
 
         return $this->generatedUrls;
