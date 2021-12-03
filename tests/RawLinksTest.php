@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Jorenvh\Share\Test;
-
 
 use Jorenvh\Share\ShareFacade;
 
@@ -83,6 +81,16 @@ class RawLinksTest extends TestCase
             ->getRawLinks();
 
         $this->assertEquals($expected, (string)$result);
+    }
+
+    /** @test */
+    public function it_can_return_empty_array_with_no_links()
+    {
+        $result = ShareFacade::page('https://codeswitch.be', 'My share title')
+            ->getRawLinks();
+
+        $this->assertIsArray($result);
+        $this->assertEmpty($result);
     }
 
     /** @test */
