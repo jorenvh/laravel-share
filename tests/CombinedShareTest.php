@@ -9,7 +9,7 @@ class CombinedShareTest extends TestCase
     /**
      * @test
      */
-    public function it_can_generate_generate_multiple_share_links_at_once()
+    public function it_can_generate_multiple_share_links_at_once()
     {
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->facebook()
@@ -54,7 +54,7 @@ class CombinedShareTest extends TestCase
     /**
      * @test
      */
-    public function it_can_generate_generate_multiple_share_links_at_once_with_extra_options()
+    public function it_can_generate_multiple_share_links_at_once_with_extra_options()
     {
         $result = ShareFacade::page('https://codeswitch.be', 'My share title', ['class' => 'my-class', 'id' => 'my-id', 'title' => 'My Title for SEO', 'rel' => 'nofollow'], '<ul>', '</ul>')
             ->facebook()
