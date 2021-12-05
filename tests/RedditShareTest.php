@@ -17,7 +17,7 @@ class RedditShareTest extends TestCase
         $this->assertEquals($expected, (string)$result);
     }
 
-        /**
+    /**
      * @test
      */
     public function it_can_generate_a_reddit_share_link_with_custom_share_text()
