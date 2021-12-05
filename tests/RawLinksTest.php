@@ -94,13 +94,13 @@ class RawLinksTest extends TestCase
     }
 
     /** @test */
-    public function it_can_return_one_link_as_string()
+    public function it_can_return_one_link_as_array()
     {
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->facebook()
             ->getRawLinks();
 
-        $this->assertIsString($result);
+        $this->assertIsArray($result);
         $this->assertNotEmpty($result);
     }
 
