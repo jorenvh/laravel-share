@@ -9,78 +9,78 @@ class RawLinksTest extends TestCase
     /** @test */
     public function it_can_return_only_facebook_built_link()
     {
-        $expected = 'https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be';
+        $expected = ['facebook' => 'https://www.facebook.com/sharer/sharer.php?u=https://codeswitch.be'];
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->facebook()
             ->getRawLinks();
 
-        $this->assertEquals($expected, (string)$result);
+        $this->assertEquals($expected, $result);
     }
 
     /** @test */
     public function it_can_return_only_twitter_built_link()
     {
-        $expected = 'https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be';
+        $expected = ['twitter' => 'https://twitter.com/intent/tweet?text=My+share+title&url=https://codeswitch.be'];
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->twitter()
             ->getRawLinks();
 
-        $this->assertEquals($expected, (string)$result);
+        $this->assertEquals($expected, $result);
     }
 
     /** @test */
     public function it_can_return_only_linkedin_built_link()
     {
-        $expected = 'https://www.linkedin.com/sharing/share-offsite?mini=true&url=https://codeswitch.be&title=My+share+title&summary=';
+        $expected = ['linkedin' => 'https://www.linkedin.com/sharing/share-offsite?mini=true&url=https://codeswitch.be&title=My+share+title&summary='];
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->linkedin()
             ->getRawLinks();
 
-        $this->assertEquals($expected, (string)$result);
+        $this->assertEquals($expected, $result);
     }
 
     /** @test */
     public function it_can_return_only_whatsapp_built_link()
     {
-        $expected = 'https://wa.me/?text=https://codeswitch.be';
+        $expected = ['whatsapp' => 'https://wa.me/?text=https://codeswitch.be'];
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->whatsapp()
             ->getRawLinks();
 
-        $this->assertEquals($expected, (string)$result);
+        $this->assertEquals($expected, $result);
     }
 
     /** @test */
     public function it_can_return_only_pinterest_built_link()
     {
-        $expected = 'https://pinterest.com/pin/create/button/?url=https://codeswitch.be';
+        $expected = ['pinterest' => 'https://pinterest.com/pin/create/button/?url=https://codeswitch.be'];
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->pinterest()
             ->getRawLinks();
 
-        $this->assertEquals($expected, (string)$result);
+        $this->assertEquals($expected, $result);
     }
 
     /** @test */
     public function it_can_return_only_reddit_built_link()
     {
-        $expected = 'https://www.reddit.com/submit?title=My+share+title&url=https://codeswitch.be';
+        $expected = ['reddit' => 'https://www.reddit.com/submit?title=My+share+title&url=https://codeswitch.be'];
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->reddit()
             ->getRawLinks();
 
-        $this->assertEquals($expected, (string)$result);
+        $this->assertEquals($expected, $result);
     }
 
     /** @test */
     public function it_can_return_only_telegram_built_link()
     {
-        $expected = 'https://telegram.me/share/url?url=https://codeswitch.be&text=My+share+title';
+        $expected = ['telegram' => 'https://telegram.me/share/url?url=https://codeswitch.be&text=My+share+title'];
         $result = ShareFacade::page('https://codeswitch.be', 'My share title')
             ->telegram()
             ->getRawLinks();
 
-        $this->assertEquals($expected, (string)$result);
+        $this->assertEquals($expected, $result);
     }
 
     /** @test */
