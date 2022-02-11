@@ -25,6 +25,6 @@ class ShareFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return static::$app['share'];
+        return Share::class;
     }
 }

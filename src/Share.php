@@ -83,6 +83,7 @@ class Share
         $this->url = $url;
         $this->title = $title;
         $this->options = $options;
+        $this->html = '';
 
         $this->setPrefixAndSuffix($prefix, $suffix);
 

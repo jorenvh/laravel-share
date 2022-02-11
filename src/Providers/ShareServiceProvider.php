@@ -33,7 +33,7 @@ class ShareServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('share', function () {
+        $this->app->bind(Share::class, function () {
             return new Share();
         });
 
