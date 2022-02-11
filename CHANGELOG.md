@@ -64,3 +64,7 @@ Other changes:
 
 ## 4.1.0 - 2021-08-09
 - Added support for "rel" attribute on the generated share links
+
+## 4.2.0 - 2021-08-09
+- Add Laravel 9 support
+- Increase minimum required php version to php 7.4
