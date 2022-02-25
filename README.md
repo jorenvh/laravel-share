@@ -60,7 +60,12 @@ This will publish the ```laravel-share.php``` config file to your config folder,
 Since this package relies on Fontawesome, you will have to require it's css, js & fonts in your app.
 You can do that by requesting a embed code [via their website](http://fontawesome.io/get-started/) or by installing it locally in your project.
 
-Laravel share supports Font Awesome v5. For Font Awsome 4 support use version [3](https://github.com/jorenvh/laravel-share/tree/3.3.1) of this package. 
+Laravel share supports Font Awesome v5 and v6. For Font Awsome 4 support use version [3](https://github.com/jorenvh/laravel-share/tree/3.3.1) of this package. 
+
+By default, the version is set to 5. To switch between v5 and v6 of FontAwesome, you can set 5 or 6 respectively in ```config/laravel-share.php```
+```php
+'fontAwesomeVersion' => 5, // or 6 for Font Awesome v6
+```
 
 ### Javascript
 
