@@ -4,7 +4,7 @@ namespace Jorenvh\Share\Test;
 
 use Jorenvh\Share\ShareFacade;
 
-class LinkedinShareTest extends TestCase
+class LinkedInShareTest extends TestCase
 {
     /**
      * @test

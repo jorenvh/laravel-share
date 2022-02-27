@@ -222,15 +222,22 @@ class Share
 
     /**
      * Get the raw generated links.
-     *
+     * Supply social media name for specific raw tag.
+     * @param string $socialMedia
      * @return string|array
      */
-    public function getRawLinks()
+    public function getRawLinks($socialMedia = null)
     {
-        if(count($this->generatedUrls) === 1) {
+        if(!is_null($socialMedia)) {
+            if(is_array($socialMedia) && count($socialMedia) > 1) {
+                $socialMedia = Arr::first($socialMedia);
+            }
+            $this->$socialMedia();
+            return Arr::get($this->generatedUrls, $socialMedia);
+        }
+        if(is_array($this->generatedUrls) && count($this->generatedUrls) === 1) {
             return Arr::first($this->generatedUrls);
         }
-
         return $this->generatedUrls;
     }
 

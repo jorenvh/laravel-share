@@ -96,13 +96,13 @@ Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->re
 #### Linkedin
 
 ``` php
-Share::page('http://jorenvanhocht.be', 'Share title')->linkedin('Extra linkedin summary can be passed here')
+Share::page('http://jorenvanhocht.be', 'Share title')->linkedin('Extra linkedin summary can be passed here');
 ```
 
 #### Whatsapp
 
 ``` php
-Share::page('http://jorenvanhocht.be')->whatsapp()
+Share::page('http://jorenvanhocht.be')->whatsapp();
 ```
 
 #### Telegram
@@ -155,6 +155,12 @@ Share::page('http://jorenvanhocht.be', 'Share title')
 	->getRawLinks();
 ```
 
+Or you can simply pass the service tag as the parameter inside ```getRawLinks()```
+
+```php
+Share::page('http://jorenvanhocht.be', 'Share title')->getRawLinks('facebook');
+```
+
 Outputs:
 
 ```html 
@@ -181,6 +187,25 @@ Outputs:
   "linkedin" => "http://www.linkedin.com/shareArticle?mini=true&url=http://jorenvanhocht.be&title=Share+title&summary=Extra+linkedin+summary+can+be+passed+here",
   "whatsapp" => "https://wa.me/?text=http://jorenvanhocht.be",
 ]
+```
+
+**Getting specific raw link**
+
+You can get the raw link of a specific service by passing the service tag inside ```getRawLinks()```
+
+```php
+$shareLinks = Share::page('http://jorenvanhocht.be', 'Share title')
+	->facebook()
+	->twitter()
+	->linkedin('Extra linkedin summary can be passed here')
+	->whatsapp();
+$linkedIn = $shareLinks->getRawLinks('linkedin');
+```
+
+Outputs:
+
+```
+http://www.linkedin.com/shareArticle?mini=true&url=http://jorenvanhocht.be&title=Share+title&summary=Extra+linkedin+summary+can+be+passed+here
 ```
 
 ### Optional parameters
