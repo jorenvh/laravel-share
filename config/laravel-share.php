@@ -48,10 +48,10 @@ return [
     |--------------------------------------------------------------------------
     |
     | Specify the version of Font Awesome that you want to use.
-    | We support version 4 and 5.
+    | We support version 4, 5, and 6.
     |
     |
     */
 
-    'fontAwesomeVersion' => 5,
+    'fontAwesomeVersion' => 6,
 ];
