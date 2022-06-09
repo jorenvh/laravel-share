@@ -40,6 +40,10 @@ return [
             'uri' => 'https://telegram.me/share/url',
             'text' => 'Default share text',
         ],
+        'viber' => [
+            'uri' => 'viber://forward?text=',
+            'text' => 'Default share text',
+        ],
     ],
 
     /*
