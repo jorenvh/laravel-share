@@ -111,6 +111,12 @@ Share::page('http://jorenvanhocht.be')->whatsapp()
 Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->telegram();
 ```
 
+#### Viber
+
+``` php
+Share::page('http://jorenvanhocht.be', 'Your share text can be placed here')->viber();
+```
+
 ### Sharing the current url
 
 Instead of manually passing an url, you can opt to use the `currentPage` function.
